@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+    background-color: black;
+}
+
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+nav {
+  width: 100%;
+  overflow: auto;
+  background-color:#5a80b7;
+}
+
+nav a {
+  width: 100px;
+  display: block;
+}
+
+header img{
+ float:right;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 40px;
+  border: black;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+  
+  .photo1, .photo2,.photo3 {
+    opacity: 0.8;
+    width: 400px;
+    height: 390px;
+    padding-top: 30px;
+  }
+
+  .photo1 {
+    padding-right: 20px;
+  }
+
+  .photo2 {
+    padding-right: 20px;
+  }
+
+  
+  .photo1:hover {
+    opacity: 1.0;
+
+  }
+  
+  .photo2:hover {
+    opacity: 1.0;
+   
+  }
+  
+  .photo3:hover {
+    opacity: 1.0;
+   
+  }
+  .box, .box2, .box3{
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+}
+.box .text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 60%; /* Set the width of the positioned div */
+}
+
+
+  footer {
+    background-color: #5a80b7;
+    color:#fff;
+    height: 50px;
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+  }
+ 

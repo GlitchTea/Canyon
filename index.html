@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CanyonHikers.com</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
+    <script>
+        const circle = new mojs.Shape({
+            left:0,
+            top:0,
+            strokeWidth: 8,
+            fill:'none',
+            radius:80,
+            scale:{0:1},
+            opacity:{10:0},
+            shape:'circle',
+            // shape:'line',
+            // shape:'rect',
+            // shape:'polygon',
+            // shape:'curve',
+            // shape:'zigzag',
+            // shape:'cross',
+            // shape:'equal',
+            stroke:'black',
+            strokeWidth:8,
+            fill:'none',
+            duration:500,
+        });
+
+        const burst = new mojs.Burst({
+            count:10,
+            left:0,
+            top:0,
+            children:{
+                shape:['circle'],
+                fill:['black'],
+                degreeShift:'rand(-360, 360)',
+                delay: 'stagger(0, 30)'
+            },
+            duration:400
+        });
+
+        const bang = new mojs.Burst({
+            left:0,
+            top:0,
+            radius:{2:10},
+            angle:45,
+            count:8,
+            children:{
+                radius:4,
+                fill:'black',
+                scale:{1:0, easing:'sin.in'},
+                pathScale:[0.7, null],
+                duration:[500, 700],
+                degreeShift:[13, null],
+            }
+        });
+
+        document.onclick = (e) => {
+            const position = {
+                x: e.pageX,
+                y: e.pageY
+            }
+
+            circle.tune(position);
+            circle.replay();
+            burst.tune(position);
+            burst.replay();
+            bang.tune(position);
+            bang.replay();
+        }
+    </script>
+        <header><img src="img/logo.png" height="200px" width="auto" alt="logo" /></header>
+        <img src="img/1200px-Dawn_on_the_S_rim_of_the_Grand_Canyon_(8645178272).jpg" width="1239.6px">
+        <div>
+        <script>
+            function play(){
+            var audio = document.getElementById("sound");
+                       audio.play();
+                       }
+            </script>
+             <nav> 
+                <ul class="nav" value="play" onclick="play()">
+                 <li><a href="#home">Home</a></li>
+                 <li><a href="#news">Sites</a></li>
+                 <li><a href="#contact">Fees</a></li>
+                 <li><a href="#about">Contact</a></li>
+                </ul>
+             </nav>
+            
+            <audio id="sound"><source src="media/onclicksound.wav" type="audio/WAV"></audio>
+        </div>
+            
+ 
+            <div class="box">
+                <img class="photo1" src="img/1200px-Canyon_midday.jpg" alt="canyon">
+                <div class="text">
+                    <h1>Popular<br>
+                        Locations</h1>
+                </div>
+            </div>
+
+            <div class="box">
+                <img class="photo2" src="img/4761251203_b9443bbf61_b.jpg" alt="canyon">
+                <div class="text">
+                    <h1>Lodging<br>
+                    and Price</h1>
+                </div>
+            </div>
+
+            <div class="box">
+                <img class="photo3" src="img/sententrance2.jpg" alt="canyon">
+                <div class="text">
+                    <h1>Camping Grounds<br>
+                            Resevervations</h1>
+                </div>
+            </div>
+        
+            
+        <footer>
+            <p>
+                <center>&copy CanyonHikers.com</center>
+            </p>
+        
+        </footer>   
+</body>
+
+</html>
